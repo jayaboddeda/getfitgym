@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "autoname": "format:GYM-{YYYY}-{####}",
+ "creation": "2024-08-30 21:23:02.646278",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uo5f",
+  "amended_from",
+  "name1",
+  "mobile_number",
+  "reference",
+  "column_break_bdvc",
+  "age",
+  "height",
+  "place",
+  "health_information_section",
+  "meal_preference",
+  "medical_issues",
+  "food_allergies",
+  "medical_description",
+  "measurements_section",
+  "inch_measurement_cm",
+  "before_picture_section",
+  "table_fzhg"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uo5f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "New Member",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_bdvc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "health_information_section",
+   "fieldtype": "Section Break",
+   "label": "Health Information"
+  },
+  {
+   "fieldname": "meal_preference",
+   "fieldtype": "Select",
+   "label": "Meal Preference",
+   "options": "Veg\nNon Veg"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_issues",
+   "fieldtype": "Check",
+   "label": "Medical Issues"
+  },
+  {
+   "fieldname": "medical_description",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Medical Description"
+  },
+  {
+   "fieldname": "table_fzhg",
+   "fieldtype": "Table",
+   "label": "Pictures",
+   "options": "Pictures"
+  },
+  {
+   "fieldname": "before_picture_section",
+   "fieldtype": "Section Break",
+   "label": "Before Picture"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "default": "0",
+   "fieldname": "food_allergies",
+   "fieldtype": "Check",
+   "label": "Food Allergies"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Link",
+   "label": "Place",
+   "options": "Country"
+  },
+  {
+   "fieldname": "measurements_section",
+   "fieldtype": "Section Break",
+   "label": "Measurements"
+  },
+  {
+   "fieldname": "inch_measurement_cm",
+   "fieldtype": "Table",
+   "label": "Inch Measurement (cm)",
+   "options": "Measurements"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Link",
+   "label": "Reference",
+   "options": "New Member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-30 22:34:47.013752",
+ "modified_by": "Administrator",
+ "module": "Getfitgym",
+ "name": "New Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
