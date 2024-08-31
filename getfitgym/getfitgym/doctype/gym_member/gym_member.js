@@ -1,7 +1,7 @@
 // Copyright (c) 2024, admin and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("New Member", {
+// frappe.ui.form.on("Gym Member", {
 // 	refresh(frm) {
 
 // 	},

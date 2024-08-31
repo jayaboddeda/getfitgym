@@ -68,7 +68,7 @@
  "modified": "2024-08-30 21:56:46.465113",
  "modified_by": "Administrator",
  "module": "Getfitgym",
- "name": "Measurements",
+ "name": "Gym Member Physical Measurements",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

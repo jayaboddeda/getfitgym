@@ -10,9 +10,11 @@
   "name1",
   "mobile_number",
   "reference",
+  "branch",
   "column_break_bdvc",
   "age",
   "height",
+  "weight",
   "place",
   "health_information_section",
   "meal_preference",
@@ -27,14 +29,15 @@
  "fields": [
   {
    "fieldname": "section_break_uo5f",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "New Member",
+   "options": "Gym Member",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -42,7 +45,9 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bdvc",
@@ -51,7 +56,9 @@
   {
    "fieldname": "age",
    "fieldtype": "Int",
-   "label": "Age"
+   "in_list_view": 1,
+   "label": "Age",
+   "reqd": 1
   },
   {
    "fieldname": "health_information_section",
@@ -62,7 +69,8 @@
    "fieldname": "meal_preference",
    "fieldtype": "Select",
    "label": "Meal Preference",
-   "options": "Veg\nNon Veg"
+   "options": "Veg\nNon Veg",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -80,7 +88,7 @@
    "fieldname": "table_fzhg",
    "fieldtype": "Table",
    "label": "Pictures",
-   "options": "Pictures"
+   "options": "Gym Member Pictures"
   },
   {
    "fieldname": "before_picture_section",
@@ -90,7 +98,9 @@
   {
    "fieldname": "height",
    "fieldtype": "Float",
-   "label": "Height"
+   "in_list_view": 1,
+   "label": "Height",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -107,7 +117,8 @@
    "fieldname": "place",
    "fieldtype": "Link",
    "label": "Place",
-   "options": "Country"
+   "options": "Territory",
+   "reqd": 1
   },
   {
    "fieldname": "measurements_section",
@@ -118,22 +129,36 @@
    "fieldname": "inch_measurement_cm",
    "fieldtype": "Table",
    "label": "Inch Measurement (cm)",
-   "options": "Measurements"
+   "options": "Gym Member Physical Measurements"
   },
   {
    "fieldname": "reference",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Reference",
-   "options": "New Member"
+   "options": "Gym Member"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-30 22:34:47.013752",
+ "modified": "2024-08-31 13:00:58.930741",
  "modified_by": "Administrator",
  "module": "Getfitgym",
- "name": "New Member",
+ "name": "Gym Member",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
