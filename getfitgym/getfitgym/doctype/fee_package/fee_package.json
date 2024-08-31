@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-31 20:23:14.233817",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qvb6",
+  "amended_from",
+  "package_name",
+  "plan_type",
+  "column_break_kaeu",
+  "timing",
+  "mode",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qvb6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fee Package",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "timing",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Timing",
+   "options": "Morning\nAfternoon\nEvening\nAnytime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "label": "Plan Type",
+   "options": "1 Month\n3 Months\n6 Months\n12 Months\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "package_name",
+   "fieldtype": "Select",
+   "label": "Package Name",
+   "options": "Basic\nPremium\nSilver\nGold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kaeu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Online\nOffline",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-31 20:33:08.072150",
+ "modified_by": "Administrator",
+ "module": "Getfitgym",
+ "name": "Fee Package",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
