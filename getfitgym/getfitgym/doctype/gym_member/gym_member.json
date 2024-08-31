@@ -7,6 +7,7 @@
  "field_order": [
   "section_break_uo5f",
   "amended_from",
+  "user_id",
   "name1",
   "mobile_number",
   "reference",
@@ -115,9 +116,8 @@
   },
   {
    "fieldname": "place",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Place",
-   "options": "Territory",
    "reqd": 1
   },
   {
@@ -146,16 +146,21 @@
   },
   {
    "fieldname": "branch",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Branch",
-   "options": "Branch",
    "reqd": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-31 13:00:58.930741",
+ "modified": "2024-09-01 01:02:49.318255",
  "modified_by": "Administrator",
  "module": "Getfitgym",
  "name": "Gym Member",
