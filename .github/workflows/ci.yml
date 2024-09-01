@@ -96,13 +96,18 @@ jobs:
       - name: Install
         working-directory: /home/runner/frappe-bench
         run: |
-          bench get-app getfitgym $GITHUB_WORKSPACE --overwrite
+          bench get-app getfitgym $GITHUB_WORKSPACE
           bench setup requirements --dev
-          bench get-app erpnext $GITHUB_WORKSPACE
           bench new-site --db-root-password root --admin-password admin test_site
-          bench --site test_site install-app getfitgym erpnext
+          bench --site test_site install-app getfitgym
           bench build
-
+          
+      - name: Install erpnext
+        working-directory: /home/runner/frappe-bench
+        run: |
+          bench get-app erpnext $GITHUB_WORKSPACE
+          bench --site test_site install-app erpnext
+          
         env:
           CI: 'Yes'
 
