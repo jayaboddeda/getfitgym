@@ -105,7 +105,7 @@ jobs:
       - name: Install erpnext
         working-directory: /home/runner/frappe-bench
         run: |
-          bench get-app erpnext $GITHUB_WORKSPACE
+          bench get-app erpnext
           bench --site test_site install-app erpnext
           
         env:
