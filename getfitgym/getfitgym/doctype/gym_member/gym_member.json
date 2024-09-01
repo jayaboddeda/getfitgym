@@ -10,13 +10,13 @@
   "user_id",
   "name1",
   "mobile_number",
-  "reference",
+  "place",
   "branch",
+  "reference",
   "column_break_bdvc",
   "age",
   "height",
   "weight",
-  "place",
   "health_information_section",
   "meal_preference",
   "medical_issues",
@@ -117,8 +117,7 @@
   {
    "fieldname": "place",
    "fieldtype": "Data",
-   "label": "Place",
-   "reqd": 1
+   "label": "Place"
   },
   {
    "fieldname": "measurements_section",
@@ -147,8 +146,7 @@
   {
    "fieldname": "branch",
    "fieldtype": "Data",
-   "label": "Branch",
-   "reqd": 1
+   "label": "Branch"
   },
   {
    "fieldname": "user_id",
@@ -160,7 +158,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-01 01:02:49.318255",
+ "modified": "2024-09-01 22:16:29.050850",
  "modified_by": "Administrator",
  "module": "Getfitgym",
  "name": "Gym Member",
@@ -191,7 +189,9 @@
    "share": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name1"
 }
