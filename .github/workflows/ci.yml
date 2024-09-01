@@ -78,6 +78,14 @@ jobs:
       - name: Install MariaDB Client
         run: sudo apt-get install -y mariadb-client-10.6
 
+      - name: Install Supervisor
+        run: sudo apt-get install -y supervisor
+
+      - name: Cleanup
+        run: |
+          rm -rf ~/frappe-bench/apps/getfitgym
+          rm -rf ~/frappe-bench/sites/test_site
+
       - name: Setup
         run: |
           pip install frappe-bench
@@ -89,7 +97,7 @@ jobs:
         working-directory: /home/runner/frappe-bench
         run: |
           bench get-app erpnext $GITHUB_WORKSPACE
-          bench get-app getfitgym $GITHUB_WORKSPACE
+          bench get-app getfitgym $GITHUB_WORKSPACE --overwrite
           bench setup requirements --dev
           bench new-site --db-root-password root --admin-password admin test_site
           bench --site test_site install-app getfitgym erpnext
