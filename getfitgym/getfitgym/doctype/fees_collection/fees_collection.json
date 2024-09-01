@@ -1,18 +1,21 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:PAK-{YY}-{##}",
  "creation": "2024-08-31 20:22:09.098560",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_hrot",
   "amended_from",
-  "member",
+  "member_id",
   "status",
   "package",
   "column_break_odhy",
   "from_date",
-  "to_date"
+  "to_date",
+  "amount",
+  "months"
  ],
  "fields": [
   {
@@ -28,14 +31,6 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "member",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Member",
-   "options": "Gym Member",
-   "reqd": 1
   },
   {
    "fieldname": "status",
@@ -57,21 +52,54 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
-   "label": "From Date"
+   "label": "From Date",
+   "reqd": 1
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
-   "label": "To Date"
+   "label": "To Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "package.amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "package.months",
+   "fieldname": "months",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "months",
+   "read_only": 1
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-31 20:49:25.051452",
+ "links": [
+  {
+   "link_doctype": "Fee Package",
+   "link_fieldname": "package_name"
+  }
+ ],
+ "modified": "2024-09-02 00:11:24.032626",
  "modified_by": "Administrator",
  "module": "Getfitgym",
  "name": "Fees Collection",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -88,7 +116,18 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  },
+  {
+   "color": "Gray",
+   "title": "Inactive"
+  }
+ ],
+ "title_field": "member_id"
 }

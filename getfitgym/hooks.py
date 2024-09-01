@@ -148,23 +148,23 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"getfitgym.tasks.all"
-# 	],
-# 	"daily": [
-# 		"getfitgym.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"getfitgym.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"getfitgym.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"getfitgym.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"getfitgym.tasks.all"
+	# ],
+	"daily": [
+		"getfitgym.tasks.update_user_status"
+	],
+	# "hourly": [
+	# 	"getfitgym.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"getfitgym.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"getfitgym.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
@@ -241,4 +241,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-

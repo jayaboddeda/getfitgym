@@ -12,7 +12,7 @@ class GymMember(Document):
             self.user_id = self.generate_user_id()
 
     def on_submit(self):
-        self.create_user_id()
+        self.create_user_email()
         self.set_user_permissions()
 
     def generate_user_id(self):
@@ -27,11 +27,11 @@ class GymMember(Document):
         user_id_str = f"{id:04}"
 
         # Combine the name and user_id
-        user_id = f"{cleaned_name}-{user_id_str}@gym.local"
+        user_email = f"{cleaned_name}-{user_id_str}@gym.local"
 
-        return user_id
+        return user_email
 
-    def create_user_id(self):
+    def create_user_email(self):
         if (self.user_id):
             doc = frappe.new_doc('User')
             doc.email = self.user_id
